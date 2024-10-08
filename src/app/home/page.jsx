@@ -74,7 +74,7 @@ export default function HomePage(){
         <div className="px-14 py-16 w-full grid grid-cols-3 gap-5 bg-white">
         {productsPreview.map((item,index) =>{
             return(
-            <div className="card glass w-full rounded-none border-white bg-white text-black">
+            <div className="card glass w-full rounded-none border-white bg-white text-black" key={index}>
             <figure>
                 <Image
                 src={item.image}
@@ -97,7 +97,7 @@ export default function HomePage(){
         <div className="px-14 py-16 w-full grid grid-cols-3 gap-5 bg-white">
            {testimonials.map((itm,index) =>{
             return(
-                <div className="card glass w-full rounded-none border-white bg-white text-black">
+                <div className="card glass w-full rounded-none border-white bg-white text-black" key={index}>
                 <figure>
                     {/* <Image
                     src={itm.image}

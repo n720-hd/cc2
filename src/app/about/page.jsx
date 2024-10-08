@@ -62,7 +62,7 @@ export default function page(){
                 {commerzbankHistory.map((item,index) =>{
                     return(
                         <>
-                        <div className="w-full h-fit flex-row gap-10 bg-purple-800 flex items-center px-20 border-y">
+                        <div className="w-full h-fit flex-row gap-10 bg-purple-800 flex items-center px-20 border-y" key={index}>
                             <div className="w-fit py-10">
                             <h1>{item.year}</h1>
                             </div>
