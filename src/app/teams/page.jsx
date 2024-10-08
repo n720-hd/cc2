@@ -51,7 +51,7 @@ export default async function Teams(){
         <div className="px-44 grid grid-cols-2 bg-white gap-7 py-10 pt-20">
             {isDatateam.map((item,index) => {
                 return(
-                    <div className="card card-side bg-base-100 shadow-xl">
+                    <div className="card card-side bg-base-100 shadow-xl" key={index}>
             <figure>
             <Image
                 src={item.picture.large}
