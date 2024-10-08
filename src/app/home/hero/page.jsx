@@ -1,13 +1,16 @@
 import { Carousel, Typography, Button } from "@material-tailwind/react";
 import Link from "next/link";
+import Image from "next/image";
  
 export function HeroSection() {
   return (
     <Carousel>
       <div className="relative h-full w-full">
-        <img
+        <Image
           src="https://www.commerzbank.de/ms/media/generated/T4Keyc4hSHwwLxxlOktxE-2f2a75549b98082ec4fb739d8e21b9fb-wp-sparen-jpeg_55-44_7by3_1200.webp"
           alt="image 1"
+          width={1080}
+          height={1080}
           className="h-[1080px] w-full object-cover"
         />
         <div className="absolute inset-0 grid h-full w-full place-items-center bg-black/75">
@@ -24,7 +27,7 @@ export function HeroSection() {
               color="white"
               className="mb-12 opacity-80"
             >
-              Simply invest money on the side with Commerzbank's securities savings plans
+              Simply invest money on the side with Commerzbanks securities savings plans
             </Typography>
             <div className="flex justify-center gap-2">
               <Link size="lg" href="/products" className="border-spacing-3 py-2 px-2 rounded-full bg-yellow-600 text-black font-bold">
@@ -35,9 +38,11 @@ export function HeroSection() {
         </div>
       </div>
       <div className="relative h-full w-full">
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
           alt="image 2"
+          width={1080}
+          height={1080}
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 grid h-full w-full items-center bg-black/75">
@@ -71,9 +76,11 @@ export function HeroSection() {
         </div>
       </div>
       <div className="relative h-full w-full">
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
           alt="image 3"
+          width={1080}
+          height={1080}
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 grid h-full w-full items-end bg-black/75">

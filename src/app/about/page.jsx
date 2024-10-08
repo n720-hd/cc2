@@ -16,7 +16,7 @@ export default function page(){
         },
         {
           year: 1940,
-          event: "During World War II, Commerzbank's assets were seized and operations disrupted."
+          event: "During World War II, Commerzbank&apos;s assets were seized and operations disrupted."
         },
         {
           year: 1958,
@@ -48,7 +48,7 @@ export default function page(){
         
         <div className="container mx-auto pt-32">
             <h1 className="text-4xl font-bold text-center mb-8">Commerzbank History</h1>
-            <p className="content-center items-center justify-center text-xl text-center">The more than 150-year history of Commerzbank is like a magnifying glass that shows many aspects of Germany's economic and political development. How did the bank develop? What does its logo mean? What were the names of the board spokespersons? Answers to these and many other questions that go beyond the bank can be found in the extensive, scientifically prepared documents in our historical archive. The archive is available to journalists and historians on request.</p>
+            <p className="content-center items-center justify-center text-xl text-center">The more than 150-year history of Commerzbank is like a magnifying glass that shows many aspects of Germany&apos;s economic and political development. How did the bank develop? What does its logo mean? What were the names of the board spokespersons? Answers to these and many other questions that go beyond the bank can be found in the extensive, scientifically prepared documents in our historical archive. The archive is available to journalists and historians on request.</p>
         </div>
         <div className="w-full h-fit mt-10 bg-cyan-300">
             <Image

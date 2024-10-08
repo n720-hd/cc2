@@ -1,4 +1,4 @@
-
+import Image from "next/image"
 
 const onFetch = async () => {
     try{
@@ -53,10 +53,12 @@ export default async function Teams(){
                 return(
                     <div className="card card-side bg-base-100 shadow-xl">
             <figure>
-            <img
+            <Image
                 src={item.picture.large}
                 alt="Movie" 
                 className="rounded-xl"
+                width={500}
+                height={500}
                 />
             </figure>
             <div className="card-body">
