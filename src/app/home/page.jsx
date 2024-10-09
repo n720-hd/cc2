@@ -60,35 +60,33 @@ export default function HomePage() {
       <div className="min-h-screen bg-gray-100">
         <HeroSection />
       </div>
-      <div className="w-screen h-full bg-white text-black text-center flex flex-col pt-3">
+      <div className="w-full h-full bg-white text-black text-center flex flex-col pt-3">
         <h1 className="text-2xl font-bold pb-4">About Us</h1>
-        <div className="flex w-full">
-          <div className="w-full h-fit flex px-20">
+        <div className="flex flex-col md:flex-row w-full">
+          <div className="w-full h-fit flex flex-col md:flex-row px-4 md:px-20">
             <div className="w-full">
-            <h1 className="pb-4 text-xl font-bold">Welcome to Commerzbank</h1>
-            <h1 className="pr-4 text-lg">Commerzbank is one of the leading banks in Germany and Europe. With a history spanning over 150 years, we take pride in offering our customers innovative financial solutions and top-notch service. Our goal is to help you achieve your financial objectives—whether in personal finance, entrepreneurship, or investment.</h1>
+              <h1 className="pb-4 text-xl font-bold">Welcome to Commerzbank</h1>
+              <p className="pr-0 md:pr-4 text-base md:text-lg">
+              Commerzbank is one of the leading banks in Germany and Europe. With a history spanning over 150 years, we take pride in offering our customers innovative financial solutions and top-notch service. Our goal is to help you achieve your financial objectives—whether in personal finance, entrepreneurship, or investment.
+              </p>
             </div>
-            <div className="w-7/12 h-fit bg-red-50">
+            <div className="w-full md:w-7/12 h-fit bg-red-50 mt-4 md:mt-0">
               <Image
-                src={
-                  "https://img.fotocommunity.com/commerzbank-tower-c1bbb53d-cd54-4fa2-b82e-db70776c3318.jpg?height=1000"
-                }
+                src="https://img.fotocommunity.com/commerzbank-tower-c1bbb53d-cd54-4fa2-b82e-db70776c3318.jpg?height=1000"
                 width={300}
                 height={300}
                 alt="ProductsMain"
-                className="w-full h-96 object-cover"
+                className="w-full h-48 md:h-96 object-cover"
               />
             </div>
           </div>
         </div>
       </div>
-      <div className="flex w-full justify-between h-fit bg-white">
-        <div className="w-full h-fit flex justify-center p-10 bg-white">
-          <div className="w-full h-[500px]">
+      <div className="flex flex-col md:flex-row w-full justify-between h-fit bg-white">
+        <div className="w-full h-fit flex justify-center p-4 md:p-10 bg-white">
+          <div className="w-full h-[300px] md:h-[500px]">
             <Image
-              src={
-                "https://www.commerzbank.de/ms/media/generated/4F67jNKbrVfrOEe9TGjyRJ-fe4eebba5ef0e7793b8f23487fc14012-commerzbank_Kostenloses_Girokonto-50-euro-jpg_51-40_16by9_1200.webp"
-              }
+              src="https://www.commerzbank.de/ms/media/generated/4F67jNKbrVfrOEe9TGjyRJ-fe4eebba5ef0e7793b8f23487fc14012-commerzbank_Kostenloses_Girokonto-50-euro-jpg_51-40_16by9_1200.webp"
               width={500}
               height={500}
               alt="ProductsMain"
@@ -96,13 +94,13 @@ export default function HomePage() {
             />
           </div>
         </div>
-        <div className="w-6/12 h-fit bg-white pt-10">
+        <div className="w-full md:w-6/12 h-fit bg-white pt-4 md:pt-10">
           <h1 className="font-bold text-2xl text-black pb-5">
             Our free checking account
           </h1>
-          <h1 className="max-w-[70%] mb-10 text-black">
+          <p className="max-w-full md:max-w-[70%] mb-10 text-black">
             Use the most important banking services digitally and free of charge
-          </h1>
+          </p>
           <Link
             href="/products"
             className="py-3 px-6 border rounded-lg text-black font-bold border-black w-full hover:bg-black hover:text-white"
@@ -111,66 +109,166 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
-      <div className="px-14 py-16 w-full grid grid-cols-3 gap-5 bg-white">
-        {productsPreview.map((item, index) => {
-          return (
-            <div
-              className="card glass w-full rounded-none border-white bg-white text-black"
-              key={index}
-            >
-              <figure>
-                <Image src={item.image} width={500} height={500} alt="car!" />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title">{item.name}</h2>
-                <p>{item.description}</p>
-                <div className="card-actions justify-start">
-                  <Link
-                    href="/products"
-                    className="btn bg-white border text-black hover:text-white "
-                  >
-                    Learn now!
-                  </Link>
-                </div>
+      <div className="px-4 md:px-14 py-16 w-full grid grid-cols-1 md:grid-cols-3 gap-5 bg-white">
+        {productsPreview.map((item, index) => (
+          <div className="card glass w-full rounded-none border-white bg-white text-black" key={index}>
+            <figure>
+              <Image src={item.image} width={500} height={500} alt={item.name} />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title">{item.name}</h2>
+              <p>{item.description}</p>
+              <div className="card-actions justify-start">
+                <Link
+                  href="/products"
+                  className="btn bg-white border text-black hover:text-white"
+                >
+                  Learn now!
+                </Link>
               </div>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
       <h1 className="font-bold w-full justify-center flex text-3xl">
         TESTIMONIAL SECTION
       </h1>
-      <div className="px-14 py-16 w-full grid grid-cols-3 gap-5 bg-white">
-        {testimonials.map((itm, index) => {
-          return (
-            <div
-              className="card glass w-full rounded-none border-white bg-white text-black"
-              key={index}
-            >
-              <figure>
-                {/* <Image
-                    src={itm.image}
-                    width={500}
-                    height={500}
-                    alt="car!" /> */}
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title">{itm.name}</h2>
-                <h2>{itm.position}</h2>
-                <p>{itm.feedback}</p>
-                <div className="card-actions justify-start">
-                  <Link
-                    href="/products"
-                    className="btn bg-white border text-black hover:text-white "
-                  >
-                    Learn now!
-                  </Link>
-                </div>
+      <div className="px-4 md:px-14 py-16 w-full grid grid-cols-1 md:grid-cols-3 gap-5 bg-white">
+        {testimonials.map((itm, index) => (
+          <div className="card glass w-full rounded-none border-white bg-white text-black" key={index}>
+            <div className="card-body">
+              <h2 className="card-title">{itm.name}</h2>
+              <h2>{itm.position}</h2>
+              <p>{itm.feedback}</p>
+              <div className="card-actions justify-start">
+                <Link
+                  href="/products"
+                  className="btn bg-white border text-black hover:text-white"
+                >
+                  Learn now!
+                </Link>
               </div>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </main>
   );
 }
+
+    // <main className="bg-white text-black">
+    //   <div className="min-h-screen bg-gray-100">
+    //     <HeroSection />
+    //   </div>
+    //   <div className="w-screen h-full bg-white text-black text-center flex flex-col pt-3">
+    //     <h1 className="text-2xl font-bold pb-4">About Us</h1>
+    //     <div className="flex w-full">
+    //       <div className="w-full h-fit flex px-20">
+    //         <div className="w-full">
+    //         <h1 className="pb-4 text-xl font-bold">Welcome to Commerzbank</h1>
+    //         <h1 className="pr-4 text-lg">Commerzbank is one of the leading banks in Germany and Europe. With a history spanning over 150 years, we take pride in offering our customers innovative financial solutions and top-notch service. Our goal is to help you achieve your financial objectives—whether in personal finance, entrepreneurship, or investment.</h1>
+    //         </div>
+    //         <div className="w-7/12 h-fit bg-red-50">
+    //           <Image
+    //             src={
+    //               "https://img.fotocommunity.com/commerzbank-tower-c1bbb53d-cd54-4fa2-b82e-db70776c3318.jpg?height=1000"
+    //             }
+    //             width={300}
+    //             height={300}
+    //             alt="ProductsMain"
+    //             className="w-full h-96 object-cover"
+    //           />
+    //         </div>
+    //       </div>
+    //     </div>
+    //   </div>
+    //   <div className="flex w-full justify-between h-fit bg-white">
+    //     <div className="w-full h-fit flex justify-center p-10 bg-white">
+    //       <div className="w-full h-[500px]">
+    //         <Image
+    //           src={
+    //             "https://www.commerzbank.de/ms/media/generated/4F67jNKbrVfrOEe9TGjyRJ-fe4eebba5ef0e7793b8f23487fc14012-commerzbank_Kostenloses_Girokonto-50-euro-jpg_51-40_16by9_1200.webp"
+    //           }
+    //           width={500}
+    //           height={500}
+    //           alt="ProductsMain"
+    //           className="w-full object-cover"
+    //         />
+    //       </div>
+    //     </div>
+    //     <div className="w-6/12 h-fit bg-white pt-10">
+    //       <h1 className="font-bold text-2xl text-black pb-5">
+    //         Our free checking account
+    //       </h1>
+    //       <h1 className="max-w-[70%] mb-10 text-black">
+    //         Use the most important banking services digitally and free of charge
+    //       </h1>
+    //       <Link
+    //         href="/products"
+    //         className="py-3 px-6 border rounded-lg text-black font-bold border-black w-full hover:bg-black hover:text-white"
+    //       >
+    //         Learn More!
+    //       </Link>
+    //     </div>
+    //   </div>
+    //   <div className="px-14 py-16 w-full grid grid-cols-3 gap-5 bg-white">
+    //     {productsPreview.map((item, index) => {
+    //       return (
+    //         <div
+    //           className="card glass w-full rounded-none border-white bg-white text-black"
+    //           key={index}
+    //         >
+    //           <figure>
+    //             <Image src={item.image} width={500} height={500} alt="car!" />
+    //           </figure>
+    //           <div className="card-body">
+    //             <h2 className="card-title">{item.name}</h2>
+    //             <p>{item.description}</p>
+    //             <div className="card-actions justify-start">
+    //               <Link
+    //                 href="/products"
+    //                 className="btn bg-white border text-black hover:text-white "
+    //               >
+    //                 Learn now!
+    //               </Link>
+    //             </div>
+    //           </div>
+    //         </div>
+    //       );
+    //     })}
+    //   </div>
+    //   <h1 className="font-bold w-full justify-center flex text-3xl">
+    //     TESTIMONIAL SECTION
+    //   </h1>
+    //   <div className="px-14 py-16 w-full grid grid-cols-3 gap-5 bg-white">
+    //     {testimonials.map((itm, index) => {
+    //       return (
+    //         <div
+    //           className="card glass w-full rounded-none border-white bg-white text-black"
+    //           key={index}
+    //         >
+    //           <figure>
+    //             {/* <Image
+    //                 src={itm.image}
+    //                 width={500}
+    //                 height={500}
+    //                 alt="car!" /> */}
+    //           </figure>
+    //           <div className="card-body">
+    //             <h2 className="card-title">{itm.name}</h2>
+    //             <h2>{itm.position}</h2>
+    //             <p>{itm.feedback}</p>
+    //             <div className="card-actions justify-start">
+    //               <Link
+    //                 href="/products"
+    //                 className="btn bg-white border text-black hover:text-white "
+    //               >
+    //                 Learn now!
+    //               </Link>
+    //             </div>
+    //           </div>
+    //         </div>
+    //       );
+    //     })}
+    //   </div>
+    // </main>
