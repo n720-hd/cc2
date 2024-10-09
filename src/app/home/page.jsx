@@ -1,6 +1,6 @@
 'use client';
 import Image from "next/image";
-import { HeroSection } from "./hero/page";
+import  HeroSection  from "../../components/hero/page";
 import Link from "next/link";
 
 export default function HomePage(){
