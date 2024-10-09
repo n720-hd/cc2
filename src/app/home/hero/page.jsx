@@ -3,7 +3,7 @@ import { Carousel, Typography, Button } from "@material-tailwind/react";
 import Link from "next/link";
 import Image from "next/image";
  
-export function HeroSection() {
+export default function HeroSection() {
   return (
     <Carousel>
       <div className="relative h-full w-full">
