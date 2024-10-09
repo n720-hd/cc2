@@ -20,17 +20,36 @@ export  default function ProductsSection(){
               }
     ]
 
-
+    const satisfiedCustomers = [
+        {
+          id: 1,
+          name: "Oliver Davis",
+          image: "https://randomuser.me/api/portraits/men/76.jpg",
+          testimonial: "I've been a customer of Commerzbank for over 10 years and I've always been impressed with their excellent service and competitive rates."
+        },
+        {
+          id: 2,
+          name: "Sophia Patel",
+          image: "https://randomuser.me/api/portraits/women/42.jpg",
+          testimonial: "I recently opened a business account with Commerzbank and the process was seamless. Their customer support team is always available to help with any questions I have."
+        },
+        {
+          id: 3,
+          name: "Alexander Müller",
+          image: "https://randomuser.me/api/portraits/men/91.jpg",
+          testimonial: "I've been using Commerzbank's online banking platform for years and it's always been easy to use and secure. I highly recommend it to anyone looking for a reliable banking solution."
+        }
+      ];
 
     return(
         <main className="text-black bg-white pt-20">
             <div className="w-full h-fit">
                 <h1 className="text-center font-bold text-3xl pb-4">Pay securely and flexibly worldwide with credit cards</h1>
                 <p className="text-xl text-center font-bold">The right credit cards for everyone,find out which credit card suits you.</p>
-            <div className="px-14 py-16 w-full grid grid-cols-3 gap-5 bg-white">
+            <div className="px-4 md:px-14 py-16 w-full grid grid-cols-1 md:grid-cols-3 gap-5 bg-white">
            {creditCards.map((itm,index) =>{
             return(
-                <div className="card glass w-full rounded-none border-white bg-white text-black" key={index}>
+        <div className="card glass w-full rounded-none border-white bg-white text-black" key={index}>
                 <figure>
                     <Image
                     src={itm.img}
@@ -49,8 +68,27 @@ export  default function ProductsSection(){
             )
            })}
         </div>
+        </div>
+        <h1 className="font-bold w-full justify-center flex text-3xl">
+        Our satisfied Customers
+        </h1>
+        <div className="px-4 md:px-14 py-16 w-full grid grid-cols-1 md:grid-cols-3 gap-5 bg-white">
+        {satisfiedCustomers.map((itm, index) => (
+          <div className="card glass w-full rounded-none border-white bg-white text-black" key={index}>
+            <Image
+                    src={itm.image}
+                    width={500}
+                    height={500}
+                    alt="customer" />
+            <div className="card-body">
+              <h2 className="card-title">{itm.name}</h2>
+              <p>{itm.testimonial}</p>
+              <div className="card-actions justify-start">
+              </div>
             </div>
-            
-        </main>
+          </div>
+        ))}
+      </div>  
+    </main>
     )
 }

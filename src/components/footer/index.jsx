@@ -24,14 +24,14 @@ export default function Footer() {
           <div className="flex justify-center items-center flex-col">
             <div className='grid grid-cols-2 gap-10'>
            <div>
-           <a 
+           <Link 
               href="https://filialsuche.commerzbank.de/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-yellow-500 text-black px-4 py-2 rounded-full w-20 h-20 flex items-center justify-center hover:bg-yellow-600 transition duration-300"
             >
               <IoLocationOutline className='w-6 h-6'/>
-            </a>
+            </Link>
             <p className='font-bold'>Branches</p>
            </div>
            <div>
@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
 
         {/* Footer Links */}
-        <div className="flex justify-center space-x-4 mt-6">
+        <div className="grid grid-cols-1 justify-center space-x-4 mt-6 md:flex">
           <Link href="/hinweise/agb">Terms & Conditions</Link>
           <Link href="/hinweise/rechtliche-hinweise">Legal Notice</Link>
           <Link href="/hinweise/impressum">Imprint</Link>

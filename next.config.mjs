@@ -22,9 +22,7 @@ const nextConfig = {
                 hostname: 'img.fotocommunity.com', 
                 pathname: '**'
                 
-            }
-
-            
+            },
         ]
 }
 }

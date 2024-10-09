@@ -29,7 +29,7 @@ export default function Navbar(){
                     width={50}
                     alt="bank-logo"
                 />
-                <a name='button' className="btn btn-ghost text-xl">Commerzbank</a>
+                <Link href='/' name='button' className="btn btn-ghost text-xl">Commerzbank</Link>
             </div>
                 
     <div className="navbar-end">
