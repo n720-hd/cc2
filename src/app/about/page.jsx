@@ -113,7 +113,7 @@ export default function page() {
           our corporate culture. They show that we are aware of our corporate
           responsibility and are guided by traditional values. They shape the
           way we deal with each other and our behavior towards internal and
-          external customers and society. We are the bank at our customers'
+          external customers and society. We are the bank at our customers
           side. Your success is our business.
         </p>
       </div>
