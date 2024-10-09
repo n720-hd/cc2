@@ -91,6 +91,7 @@ export default function page() {
           width={300}
           height={300}
           className="absolute top-0 left-0 w-full h-[60vh] object-cover z-0"
+          alt="banner-1"
         />
         <div className="relative z-10 flex flex-col items-center justify-end h-full text-white text-center pb-40 bg-black/20">
           <h1 className="text-5xl font-bold">Who we are</h1>
@@ -174,6 +175,7 @@ export default function page() {
           width={300}
           height={300}
           className="w-full h-[70vh] object-cover"
+          alt="history-1"
         />
       </div>
       <div className="w-full h-fit px-20 mt-10">
