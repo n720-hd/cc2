@@ -6,6 +6,11 @@ const nextConfig = {
                 protocol: 'https', 
                 hostname: 'www.commerzbank.de', 
                 pathname: '**'
+            },
+            {
+                protocol: 'https', 
+                hostname: 'images.unsplash.com', 
+                pathname: '**'
             }
         ]
 }
