@@ -58,11 +58,11 @@ export default function page(){
                 className="w-full h-[70vh] object-cover"
             />
         </div>
-        <div className="w-full h-fit bg-red-800 px-20 mt-10">
+        <div className="w-full h-fit px-20 mt-10">
                 {commerzbankHistory.map((item,index) =>{
                     return(
                         <>
-                        <div className="w-full h-fit flex-row gap-10 bg-purple-800 flex items-center px-20 border-y" key={index}>
+                        <div className="w-full h-fit flex-row gap-10 font-bold flex items-center px-20 border-y" key={index}>
                             <div className="w-fit py-10">
                             <h1>{item.year}</h1>
                             </div>

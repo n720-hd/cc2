@@ -5,6 +5,7 @@ import { CiLock } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
 import React, { useState } from 'react';
 import { Button, Drawer, Space } from 'antd';
+import Link from "next/link";
 
 export default function Navbar(){
     const [open, setOpen] = useState(false);
@@ -53,7 +54,7 @@ export default function Navbar(){
         </Button>
       </Space>
       <Drawer
-        title="Basic Drawer"
+        title=""
         placement={placement}
         closable={false}
         onClose={onClose}
@@ -61,10 +62,11 @@ export default function Navbar(){
         key={placement}
         drawerStyle={{ backgroundColor: "#1f2937", color: "white" }}
       >
-        <div className="flex flex-col gap-4 border-t pt-10">
-            <p>About us</p>
-            <p>Our Products</p>
-            <p>Teams</p>
+        <div className="flex flex-col gap-4 border-t pt-10 text-xl font-bold">
+            <Link href='/'>Home</Link>
+            <Link href='/about'>About us</Link>
+            <Link href='/products'>Our Products</Link>
+            <Link href='/teams'>Teams</Link>
         </div>
       </Drawer>
     </>

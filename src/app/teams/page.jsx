@@ -56,7 +56,7 @@ export default async function Teams(){
             <Image
                 src={item.picture.large}
                 alt="Movie" 
-                className="rounded-xl"
+                className="rounded-xl w-full h-full p-3 "
                 width={500}
                 height={500}
                 />
